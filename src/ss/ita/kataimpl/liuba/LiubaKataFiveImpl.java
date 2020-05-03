@@ -1,4 +1,4 @@
-package ss.ita.kataimpl;
+package ss.ita.kataimpl.liuba;
 
 import ss.ita.kata.KataFive;
 

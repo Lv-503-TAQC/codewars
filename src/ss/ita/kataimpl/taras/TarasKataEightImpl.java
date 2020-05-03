@@ -1,4 +1,4 @@
-package ss.ita.kataimpl;
+package ss.ita.kataimpl.taras;
 
 import ss.ita.kata.KataEight;
 

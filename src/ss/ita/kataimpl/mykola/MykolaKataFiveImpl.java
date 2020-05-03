@@ -1,10 +1,10 @@
-package ss.ita.kataimpl;
+package ss.ita.kataimpl.mykola;
 
 import ss.ita.kata.KataFive;
 
 import java.math.BigInteger;
 
-public class TarasKataFiveImpl implements KataFive {
+public class MykolaKataFiveImpl implements KataFive {
     @Override
     public int artificialRain(int[] v) {
         return 0;
