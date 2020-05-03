@@ -1,4 +1,4 @@
-package ss.ita.kataimpl;
+package ss.ita.kataimpl.mykola;
 
 import ss.ita.kata.KataSix;
 

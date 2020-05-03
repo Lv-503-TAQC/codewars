@@ -1,4 +1,4 @@
-package ss.ita.kataimpl;
+package ss.ita.kataimpl.nik;
 
 import ss.ita.kata.KataFive;
 

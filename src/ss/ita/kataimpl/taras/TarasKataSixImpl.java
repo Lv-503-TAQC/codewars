@@ -1,8 +1,8 @@
-package ss.ita.kataimpl;
+package ss.ita.kataimpl.taras;
 
 import ss.ita.kata.KataSix;
 
-public class NikKataSixImpl implements KataSix {
+public class TarasKataSixImpl implements KataSix {
     @Override
     public long findNb(long m) {
         return 0;
