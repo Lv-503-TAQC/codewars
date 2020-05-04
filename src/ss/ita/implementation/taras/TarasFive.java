@@ -1,10 +1,10 @@
-package ss.ita.kataimpl.taras;
+package ss.ita.implementation.taras;
 
-import ss.ita.kata.KataFive;
+import ss.ita.kata.Five;
 
 import java.math.BigInteger;
 
-public class TarasKataFiveImpl implements KataFive {
+public class TarasFive implements Five {
     @Override
     public int artificialRain(int[] v) {
         return 0;

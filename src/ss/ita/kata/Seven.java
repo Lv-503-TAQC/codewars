@@ -1,6 +1,6 @@
 package ss.ita.kata;
 
-public interface KataSeven {
+public interface Seven {
 //    Looking for a benefactor
     long newAvg(final double[] arr, final double navg);
 

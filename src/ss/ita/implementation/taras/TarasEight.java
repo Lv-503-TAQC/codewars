@@ -1,8 +1,8 @@
-package ss.ita.kataimpl.liuba;
+package ss.ita.implementation.taras;
 
-import ss.ita.kata.KataEight;
+import ss.ita.kata.Eight;
 
-public class LiubaKataEightImpl implements KataEight {
+public class TarasEight implements Eight {
     @Override
     public int Liters(double time) {
         return 0;

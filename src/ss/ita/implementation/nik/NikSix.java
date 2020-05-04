@@ -1,8 +1,8 @@
-package ss.ita.kataimpl.mykola;
+package ss.ita.implementation.nik;
 
-import ss.ita.kata.KataSix;
+import ss.ita.kata.Six;
 
-public class MykolaKataSixImpl implements KataSix {
+public class NikSix implements Six {
     @Override
     public long findNb(long m) {
         return 0;

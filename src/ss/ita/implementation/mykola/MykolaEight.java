@@ -1,8 +1,8 @@
-package ss.ita.kataimpl.mykola;
+package ss.ita.implementation.mykola;
 
-import ss.ita.kata.KataEight;
+import ss.ita.kata.Eight;
 
-public class MykolaKataEightImpl implements KataEight {
+public class MykolaEight implements Eight {
     @Override
     public int Liters(double time) {
         return 0;

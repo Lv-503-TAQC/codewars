@@ -1,6 +1,6 @@
 package ss.ita.kata;
 
-public interface KataEight {
+public interface Eight {
 //    Keep Hydrated!
     int Liters(final double time);
 
