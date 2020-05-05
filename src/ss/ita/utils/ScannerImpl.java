@@ -33,4 +33,15 @@ public class ScannerImpl implements Scannable {
     public String enterString() throws InputMismatchException {
         return scanner.nextLine();
     }
+
+    /*Nik*/
+    @Override
+    public String enterLine() throws InputMismatchException {
+        return scanner.nextLine();
+    }
+
+    @Override
+    public String enterWord() throws InputMismatchException {
+        return scanner.next();
+    }
 }
