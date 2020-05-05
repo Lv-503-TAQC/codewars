@@ -1,8 +1,5 @@
 package ss.ita.utils;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.LoggerFactory;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
