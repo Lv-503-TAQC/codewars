@@ -37,4 +37,12 @@ public class Reader {
         }
         return line;
     }
+    public String[] enterLines() {
+        System.out.println("Enter some lines.\nEnter empty string (simply press 'Enter') for stop");
+        return scanner.enterLines();
+    }
+    public String[] enterWords() {
+        System.out.println("Enter one string line. It will be convert to an array of strings where each element is a single word of your input.");
+        return scanner.enterWords();
+    }
 }
