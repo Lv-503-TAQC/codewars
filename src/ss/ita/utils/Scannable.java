@@ -10,7 +10,8 @@ public interface Scannable {
     int enterNumber() throws InputMismatchException;
 
     int enterNaturalNumber() throws InputMismatchException;
-
+    //Nik's job
     String enterWord() throws InputMismatchException;
     String enterLine() throws InputMismatchException;
+
 }

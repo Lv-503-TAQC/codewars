@@ -1,6 +1,8 @@
 package ss.ita.utils;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class ScannerImpl implements Scannable {
@@ -27,8 +29,24 @@ public class ScannerImpl implements Scannable {
         return scanner.nextLine();
     }
 
+
     @Override
     public String enterWord() throws InputMismatchException {
         return scanner.next();
+    }
+    //I build these methods with help of enterLine()
+    public String[] enterLines() {
+        List<String> strings = new ArrayList<>();
+        String str = enterLine();
+        while(!str.equals("")) {
+            strings.add(str);
+            str = enterLine();
+        }
+        return (String[]) strings.toArray();
+    }
+
+    public String[] enterWords() {
+        String str = enterLine();
+        return str.split("\\s");
     }
 }
