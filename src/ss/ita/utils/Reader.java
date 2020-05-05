@@ -14,4 +14,17 @@ public class Reader {
         }
         return number;
     }
+
+    /*Liuba's method*/
+    public float readFloat (){
+        System.out.println("Enter the number pf the float type.");
+        float floatNum;
+            try {
+                floatNum = scanner.enterFloat();
+            } catch (Exception e) {
+            System.out.println("The value entered is not a number of the float type!");
+                return this.readFloat();
+            }
+        return floatNum;
+    }
 }

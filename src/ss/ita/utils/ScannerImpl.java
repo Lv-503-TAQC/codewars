@@ -22,6 +22,13 @@ public class ScannerImpl implements Scannable {
         return number;
     }
 
+
+    /*Liuba's method*/
+    @Override
+    public float enterFloat() throws InputMismatchException {
+        return scanner.nextFloat();
+    }
+
     @Override
     public String enterString() throws InputMismatchException {
         return scanner.nextLine();
