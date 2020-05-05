@@ -1,8 +1,8 @@
-package ss.ita.implementation.liuba;
+package ss.ita.kata.implementation.taras;
 
 import ss.ita.kata.Six;
 
-public class LiubaSix implements Six {
+public class TarasSix implements Six {
     @Override
     public long findNb(long m) {
         return 0;

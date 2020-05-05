@@ -1,8 +1,8 @@
-package ss.ita.implementation.nik;
+package ss.ita.kata.implementation.liuba;
 
 import ss.ita.kata.Seven;
 
-public class NikSeven implements Seven {
+public class LiubaSeven implements Seven {
     @Override
     public long newAvg(double[] arr, double navg) {
         return 0;

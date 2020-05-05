@@ -1,10 +1,10 @@
-package ss.ita.implementation.liuba;
+package ss.ita.kata.implementation.nik;
 
 import ss.ita.kata.Five;
 
 import java.math.BigInteger;
 
-public class LiubaFive implements Five {
+public class NikFive implements Five {
     @Override
     public int artificialRain(int[] v) {
         return 0;

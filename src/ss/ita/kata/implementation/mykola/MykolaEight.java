@@ -1,8 +1,8 @@
-package ss.ita.implementation.taras;
+package ss.ita.kata.implementation.mykola;
 
 import ss.ita.kata.Eight;
 
-public class TarasEight implements Eight {
+public class MykolaEight implements Eight {
     @Override
     public int Liters(double time) {
         return 0;

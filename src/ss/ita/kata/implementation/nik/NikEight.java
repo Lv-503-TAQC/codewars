@@ -1,8 +1,8 @@
-package ss.ita.implementation.liuba;
+package ss.ita.kata.implementation.nik;
 
 import ss.ita.kata.Eight;
 
-public class LiubaEight implements Eight {
+public class NikEight implements Eight {
     @Override
     public int Liters(double time) {
         return 0;
