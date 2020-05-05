@@ -2,15 +2,21 @@ package ss.ita.kata.implementation.nik;
 
 import ss.ita.kata.Eight;
 
+<<<<<<< HEAD:src/ss/ita/kataimpl/NikKataEightImpl.java
+import java.util.stream.IntStream;
+
+public class NikKataEightImpl implements KataEight {
+=======
 public class NikEight implements Eight {
+>>>>>>> d6c482a661a54a2ce6a10bb38d7bd2569de1e4e8:src/ss/ita/kata/implementation/nik/NikEight.java
     @Override
     public int Liters(double time) {
         return 0;
     }
 
     @Override
-    public double getVolumeOfCuboid(double length, double width, double height) {
-        return 0;
+    public double getVolumeOfCuboid(final double length, final double width, final double height) {
+        return length * width * height;
     }
 
     @Override
@@ -35,7 +41,7 @@ public class NikEight implements Eight {
 
     @Override
     public int stringToNumber(String str) {
-        return 0;
+        return Integer.parseInt(str);
     }
 
     @Override
@@ -50,6 +56,6 @@ public class NikEight implements Eight {
 
     @Override
     public int[] divisibleBy(int[] numbers, int divider) {
-        return new int[0];
+        return IntStream.of(numbers).filter(e -> e%divider == 0).toArray();
     }
 }
