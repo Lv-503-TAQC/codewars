@@ -1,8 +1,8 @@
-package ss.ita.kataimpl;
+package ss.ita.kata.implementation.taras;
 
-import ss.ita.kata.KataSeven;
+import ss.ita.kata.Seven;
 
-public class MykolaKataSevenImpl implements KataSeven {
+public class TarasSeven implements Seven {
     @Override
     public long newAvg(double[] arr, double navg) {
         return 0;

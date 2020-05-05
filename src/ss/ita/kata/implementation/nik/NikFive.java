@@ -1,10 +1,10 @@
-package ss.ita.kataimpl;
+package ss.ita.kata.implementation.nik;
 
-import ss.ita.kata.KataFive;
+import ss.ita.kata.Five;
 
 import java.math.BigInteger;
 
-public class NikKataFiveImpl implements KataFive {
+public class NikFive implements Five {
     @Override
     public int artificialRain(int[] v) {
         return 0;

@@ -1,6 +1,6 @@
 package ss.ita.kata;
 
-public interface KataSix {
+public interface Six {
 //    Build a pile of Cubes
     long findNb(final long m);
 

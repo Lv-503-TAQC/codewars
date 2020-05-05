@@ -1,10 +1,14 @@
-package ss.ita.kataimpl;
+package ss.ita.kata.implementation.nik;
 
-import ss.ita.kata.KataSeven;
+import ss.ita.kata.Seven;
 
+<<<<<<< HEAD:src/ss/ita/kataimpl/NikKataSevenImpl.java
 import java.util.Arrays;
 
 public class NikKataSevenImpl implements KataSeven {
+=======
+public class NikSeven implements Seven {
+>>>>>>> d6c482a661a54a2ce6a10bb38d7bd2569de1e4e8:src/ss/ita/kata/implementation/nik/NikSeven.java
     @Override
     public long newAvg(double[] a, double navg) {
         double sum = Arrays.stream(a).sum();
