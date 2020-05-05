@@ -11,5 +11,8 @@ public interface Scannable {
 
     int enterNaturalNumber() throws InputMismatchException;
 
+    /*Liuba's method*/
+    float enterFloat() throws InputMismatchException;
+
     String enterString() throws InputMismatchException;
 }

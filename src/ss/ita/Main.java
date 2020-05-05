@@ -6,7 +6,7 @@ import ss.ita.utils.ScannerImpl;
 public class Main {
     public static void main(String[] args) {
         Reader s = new Reader();
-        int x = s.readInt();
+        float x = s.readFloat();
         System.out.println(x);
     }
 }
