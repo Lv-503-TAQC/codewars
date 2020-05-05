@@ -2,7 +2,7 @@ package ss.ita.kata;
 
 import java.math.BigInteger;
 
-public interface KataFive {
+public interface Five {
 //    Artificial Rain
     int artificialRain(final int[] v);
 

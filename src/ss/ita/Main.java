@@ -1,8 +1,12 @@
 package ss.ita;
 
-public class Main {
+import ss.ita.utils.Reader;
+import ss.ita.utils.ScannerImpl;
 
+public class Main {
     public static void main(String[] args) {
-	// write your code here
+        Reader s = new Reader();
+        int x = s.readInt();
+        System.out.println(x);
     }
 }

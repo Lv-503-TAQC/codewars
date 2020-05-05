@@ -1,8 +1,8 @@
-package ss.ita.kataimpl;
+package ss.ita.kata.implementation.liuba;
 
-import ss.ita.kata.KataSeven;
+import ss.ita.kata.Seven;
 
-public class LiubaKataSevenImpl implements KataSeven {
+public class LiubaSeven implements Seven {
     @Override
     public long newAvg(double[] arr, double navg) {
         return 0;

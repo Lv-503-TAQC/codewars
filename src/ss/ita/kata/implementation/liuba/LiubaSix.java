@@ -1,8 +1,8 @@
-package ss.ita.kataimpl;
+package ss.ita.kata.implementation.liuba;
 
-import ss.ita.kata.KataSix;
+import ss.ita.kata.Six;
 
-public class NikKataSixImpl implements KataSix {
+public class LiubaSix implements Six {
     @Override
     public long findNb(long m) {
         return 0;

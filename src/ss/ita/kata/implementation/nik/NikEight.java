@@ -1,8 +1,8 @@
-package ss.ita.kataimpl;
+package ss.ita.kata.implementation.nik;
 
-import ss.ita.kata.KataEight;
+import ss.ita.kata.Eight;
 
-public class NikKataEightImpl implements KataEight {
+public class NikEight implements Eight {
     @Override
     public int Liters(double time) {
         return 0;
