@@ -11,5 +11,6 @@ public interface Scannable {
 
     int enterNaturalNumber() throws InputMismatchException;
 
-    String enterString() throws InputMismatchException;
+    String enterWord() throws InputMismatchException;
+    String enterLine() throws InputMismatchException;
 }

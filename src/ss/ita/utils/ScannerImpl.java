@@ -23,7 +23,12 @@ public class ScannerImpl implements Scannable {
     }
 
     @Override
-    public String enterString() throws InputMismatchException {
+    public String enterLine() throws InputMismatchException {
         return scanner.nextLine();
+    }
+
+    @Override
+    public String enterWord() throws InputMismatchException {
+        return scanner.next();
     }
 }
