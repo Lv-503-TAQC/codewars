@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         Reader s = new Reader();
-        float x = s.readFloat();
-        System.out.println(x);
+        int[] x = s.readNumberArray2();
+        System.out.println(Arrays.toString(x));
     }
 }
