@@ -123,4 +123,19 @@ public class Reader {
         System.out.println("Array of string will be generated from your single input. Each word in line will be separate element in array.");
         return scanner.enterLine().split("\\s");
     }
+
+    /*Mykola */
+    public long readLong() {
+        System.out.println("Enter long type number");
+        long longNumb;
+        try {
+            longNumb = scanner.enterLong();
+        } catch (Exception e) {
+            System.out.println("This is not long type number" + e);
+            return this.readLong();
+        }
+        return longNumb;
+    }
+
+
 }

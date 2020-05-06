@@ -13,8 +13,12 @@ public interface Scannable {
 
     /*Nik*/
     String enterLine() throws InputMismatchException;
+
     String enterWord() throws InputMismatchException;
 
     /*Taras*/
     double enterDouble() throws InputMismatchException;
+
+    /*Mykola*/
+    long enterLong() throws InputMismatchException;
 }

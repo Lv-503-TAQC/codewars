@@ -62,4 +62,13 @@ public class ScannerImpl implements Scannable {
     public String enterWord() throws InputMismatchException {
         return scanner.next();
     }
+
+    @Override
+    public long enterLong() throws InputMismatchException {
+        try {
+            return Long.parseLong(scanner.next());
+        } catch (InputMismatchException e) {
+            throw new InputMismatchException();
+        }
+    }
 }
