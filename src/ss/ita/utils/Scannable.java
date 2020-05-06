@@ -15,4 +15,8 @@ public interface Scannable {
     float enterFloat() throws InputMismatchException;
 
     String enterString() throws InputMismatchException;
+
+    /*Nik*/
+    String enterLine() throws InputMismatchException;
+    String enterWord() throws InputMismatchException;
 }
