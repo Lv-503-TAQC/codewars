@@ -8,6 +8,7 @@ public class ScannerImpl implements Scannable {
 //    private static final Logger LOG = LoggerFactory.get
 
     private Scanner scanner = new Scanner(System.in);
+
     @Override
     public int enterNumber() throws InputMismatchException {
         return scanner.nextInt();
@@ -16,7 +17,7 @@ public class ScannerImpl implements Scannable {
     @Override
     public int enterNaturalNumber() throws InputMismatchException {
         int number = scanner.nextInt();
-       if (number < 1){
+        if (number < 1) {
             throw new InputMismatchException("");
         }
         return number;
@@ -43,5 +44,14 @@ public class ScannerImpl implements Scannable {
     @Override
     public String enterWord() throws InputMismatchException {
         return scanner.next();
+    }
+
+    @Override
+    public long enterLong() throws InputMismatchException {
+        try {
+            return Long.parseLong(scanner.next());
+        } catch (InputMismatchException e) {
+            throw new InputMismatchException();
+        }
     }
 }
