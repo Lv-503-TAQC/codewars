@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Reader {
     private final ScannerImpl scanner = new ScannerImpl();
@@ -38,22 +39,18 @@ public class Reader {
     public int[] readNumberArray() {
         System.out.println("Put numbers separating by whitespaces. This numbers will be added to array.");
 
-        String[] input = scanner.enterLine().split("\\s");
-        for (int i = 0; i < input.length; i++) {
-            try {
-                Integer.parseInt(input[i]);
-            } catch (NumberFormatException e) {
-                System.out.println("You put illegal symbol. Try again please.");
-                return this.readNumberArray();
-            }
+        List<Integer> intList = new ArrayList<Integer>();
+        try {
+            intList = Arrays.asList(scanner.enterLine().split("\\s"))
+                    .stream()
+                    .map(e -> Integer.parseInt(e))
+                    .collect(Collectors.toList());
+        } catch (Exception e) {
+            System.out.println("You put illegal symbol. Try again please.");
+            return this.readNumberArray();
         }
 
-        int[] intArray = new int[input.length];
-        for (int i = 0; i < intArray.length; i++) {
-            intArray[i] = Integer.parseInt(input[i]);
-        }
-
-        return intArray;
+        return intList.stream().mapToInt(Integer::intValue).toArray();
     }
 
     public double readDouble() {
