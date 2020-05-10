@@ -16,11 +16,13 @@ public class WhereIsHeTest {
 
     @Test
     public void test1(){
-        Assert.assertEquals(2, tarasSeven.whereIsHe(3, 1, 1));
+        Assert.assertEquals(tarasSeven.whereIsHe(3, 1, 1), 2);
+        System.out.println("Test1 is completed");
     }
 
     @Test
     public void test2(){
-        Assert.assertEquals(3, tarasSeven.whereIsHe(5, 2, 3));
+        Assert.assertEquals(tarasSeven.whereIsHe(5, 2, 3), 3);
+        System.out.println("Test2 is completed");
     }
 }

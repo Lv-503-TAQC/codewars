@@ -17,16 +17,19 @@ public class SeriesSumTest {
 
     @Test
     void test1() {
-        Assert.assertEquals("1,57", tarasSeven.seriesSum(5));
+        Assert.assertEquals(tarasSeven.seriesSum(5), "1,57");
+        System.out.println("Test1 is completed");
     }
 
     @Test
     void test2() {
-        Assert.assertEquals("1,77", tarasSeven.seriesSum(9));
+        Assert.assertEquals(tarasSeven.seriesSum(9), "1,77");
+        System.out.println("Test2 is completed");
     }
 
     @Test
     void test3() {
-        Assert.assertEquals("1,94", tarasSeven.seriesSum(15));
+        Assert.assertEquals(tarasSeven.seriesSum(15), "1,94");
+        System.out.println("Test3 is completed");
     }
 }

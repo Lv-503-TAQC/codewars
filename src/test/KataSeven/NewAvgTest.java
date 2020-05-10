@@ -18,6 +18,7 @@ public class NewAvgTest {
     @Test
     public void test() {
         System.out.println("Fixed Tests newAvg");
+
         double[] a = new double[]{14.0, 30.0, 5.0, 7.0, 9.0, 11.0, 16.0};
         Assert.assertEquals(tarasSeven.newAvg(a, 90), 628);
 
@@ -26,8 +27,8 @@ public class NewAvgTest {
     }
 
     @Test(expectedExceptions = IllegalArgumentException.class)
-    public void testIllegalArgumentException1() {
-        System.out.println("--- Exception 1 ---");
+    public void testIllegalArgumentException() {
+        System.out.println("--- Exception ---");
         double[]a = new double[] {14, 30, 5, 7, 9, 11, 15};
         tarasSeven.newAvg(a, 2);
     }
