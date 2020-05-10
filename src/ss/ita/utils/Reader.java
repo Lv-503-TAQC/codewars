@@ -14,7 +14,7 @@ public class Reader {
 
         int number;
         try {
-            number = scanner.enterNaturalNumber();
+            number = scanner.enterNumber();
         } catch (Exception e) {
             System.out.println("It`s not a number, please try again.");
             return this.readInt();
