@@ -15,6 +15,7 @@ public class NikSeven implements Seven {
 
     @Override
     public int whereIsHe(int p, int bef, int aft) {
-        return 0;
+        if(p - bef > aft) return aft + 1;
+        return p - bef;
     }
 }
