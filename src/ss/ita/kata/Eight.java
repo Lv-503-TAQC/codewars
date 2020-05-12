@@ -2,7 +2,7 @@ package ss.ita.kata;
 
 public interface Eight {
 //    Keep Hydrated!
-    int Liters(final double time);
+    int liters(final double time);
 
 //    Volume of a cuboid
     double getVolumeOfCuboid(final double length, final double width, final double height);

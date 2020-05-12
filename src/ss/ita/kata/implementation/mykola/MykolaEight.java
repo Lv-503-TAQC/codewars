@@ -4,7 +4,7 @@ import ss.ita.kata.Eight;
 
 public class MykolaEight implements Eight {
     @Override
-    public int Liters(double time) {
+    public int liters(double time) {
         return 0;
     }
 

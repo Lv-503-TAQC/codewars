@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class LiubaEight implements Eight {
     @Override
-    public int Liters(double time) {
+    public int liters(double time) {
         double b = time * 0.5;
         return (int) b;
     }
