@@ -13,5 +13,6 @@ public class Main {
         Seven tarasSeven = new TarasSeven();
         String result = tarasSeven.seriesSum(r.readInt());
         System.out.println(result);
+
     }
 }
