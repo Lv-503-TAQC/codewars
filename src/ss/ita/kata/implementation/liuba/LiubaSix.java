@@ -114,7 +114,102 @@ public class LiubaSix implements Six {
 
     @Override
     public String nbaCup(String resultSheet, String toFind) {
-        return null;
+
+        int team = 0;
+        int adversaries = 0;
+        int matchNumbers = 0;
+        int teamTotal = 0;
+        int adversTotal = 0;
+        int wins = 0;
+        int draws = 0;
+        int defeats = 0;
+        int rank = 0;
+        int gameNumb = 0;
+        String s = "";
+
+
+        if (toFind.length() > 1) {
+
+            String[] strArr = resultSheet.split(",");
+
+            for (String match : strArr) {
+                Pattern p = Pattern.compile(toFind + "\\b");
+                Matcher m = p.matcher(match);
+
+                if (m.find()) {
+                    gameNumb++;
+
+                    int index = match.indexOf(toFind);
+
+                    if (index > 0) {
+
+                        p = Pattern.compile("[0-9]+[.][0-9]+|[0-9]+");
+                        m = p.matcher(match);
+
+                        if (m.find()) {
+                            try {
+                                adversTotal += Integer.valueOf(match.substring(m.start(), m.end()));
+                                adversaries = Integer.valueOf(match.substring(m.start(), m.end()));
+                            } catch (NumberFormatException e) {
+                                s = "Error(float number):" + match;
+
+                            }
+                        }
+                        p = Pattern.compile("([0-9]+)$");
+                        m = p.matcher(match);
+
+                        if (m.find()) {
+                            teamTotal += Integer.valueOf(match.substring(m.start(), m.end()));
+                            team = Integer.valueOf(match.substring(m.start(), m.end()));
+                        }
+
+                    } else if (index == 0) {
+                        p = Pattern.compile("[0-9]+");
+                        m = p.matcher(match);
+
+                        if (m.find()) {
+                            int number = Integer.valueOf(match.substring(m.start(), m.end()));
+                            teamTotal += number;
+                            team = number;
+                        }
+
+                        p = Pattern.compile("([0-9]+)$");
+                        m = p.matcher(match);
+
+                    }
+
+                    if (m.find()) {
+
+                        adversTotal += Integer.valueOf(match.substring(m.start(), m.end()));
+                        adversaries = Integer.valueOf(match.substring(m.start(), m.end()));
+                    }
+
+                    if (team > adversaries) {
+                        wins++;
+                        rank += 3;
+                    } else if (team == adversaries) {
+                        draws++;
+                        rank += 1;
+                    } else {
+                        defeats++;
+                    }
+
+                }
+
+            }
+
+            if (s.indexOf("Error(float number)") != -1) {
+                return s;
+
+            } else if (gameNumb > 0) {
+                s = (toFind + ":W=" + wins + ";D=" + draws + ";L=" + defeats + ";Scored="
+                        + teamTotal + ";Conceded=" + adversTotal + ";Points=" + rank);
+            } else {
+                s = toFind + ":This team didn't play!";
+            }
+        }
+
+        return s;
     }
 
     @Override
@@ -127,8 +222,8 @@ public class LiubaSix implements Six {
 
         HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
 
-            String key = "";
-            int value = 0;
+        String key = "";
+        int value = 0;
 
         for (String letter : lstOf1stLetter) {
             value = 0;
