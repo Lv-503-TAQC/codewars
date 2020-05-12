@@ -1,4 +1,4 @@
-package test.KataSix;
+package test.kata.implementation.liuba;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -9,16 +9,16 @@ import ss.ita.kata.implementation.mykola.MykolaSix;
 import ss.ita.kata.implementation.nik.NikSix;
 import ss.ita.kata.implementation.taras.TarasSix;
 
-public class FindNbTest {
+public class findNb {
 
-    Six ipml = new LiubaSix();
-//    Six ipml = new TarasSix();
-//    Six ipml = new NikSix();
-//    Six ipml = new MykolaSix();
+    Six liubaSix = new LiubaSix();
+    Six tarasSix = new TarasSix();
+    Six nikSix = new NikSix();
+    Six mykolaSix = new MykolaSix();
 
     @Test(dataProvider="getData")
     public void findNb (long expected, long input) {
-        long actual = ipml.findNb(input);
+        long actual = liubaSix.findNb(input);
         Assert.assertEquals(actual, expected);
 
     }
@@ -37,3 +37,4 @@ public class FindNbTest {
     }
 
 }
+
