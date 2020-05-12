@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Taras/IdeaProjects/codewars/src/test/kata/implementation/taras/TarasEightTest.java">
+        <classes>
+            <class name="test.kata.implementation.taras.TarasEightTest">
+                <methods>
+                    <include name="countPositivesSumNegativesBasicTest"/>
+                    <include name="countPositivesSumNegativesInputWithZeroes"/>
+                    <include name="divisibleByBasicTest"/>
+                    <include name="divisibleByBasicTest2"/>
+                    <include name="divisibleByBasicTest3"/>
+                    <include name="twoDecimalPlacesBasicTest"/>
+                    <include name="twoDecimalPlacesBasicTest2"/>
+                    <include name="amIWilsonBasicTest"/>
+                    <include name="amIWilsonBasicTest2"/>
+                    <include name="amIWilsonBasicTest3"/>
+                    <include name="stringToNumberBasicTest"/>
+                    <include name="stringToNumberBasicTest2"/>
+                    <include name="stringToNumberBasicTest3"/>
+                    <include name="stringToNumberBasicTest4"/>
+                    <include name="squareOrSquareRootBasicTest"/>
+                    <include name="squareOrSquareRootBasicTest2"/>
+                    <include name="squareOrSquareRootBasicTest3"/>
+                    <include name="fixTheMeerkatBasicTest"/>
+                    <include name="mpgToKPMBasicTest"/>
+                    <include name="mpgToKPMBasicTest2"/>
+                    <include name="mpgToKPMBasicTest3"/>
+                    <include name="volumeOfCuboidBasicTest"/>
+                    <include name="volumeOfCuboidBasicTest2"/>
+                    <include name="litersBasicTest"/>
+                    <include name="litersBasicTest2"/>
+                    <include name="litersBasicTest3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Taras/IdeaProjects/codewars/src/test/kata/implementation/taras/TarasSevenTest.java">
+        <classes>
+            <class name="test.kata.implementation.taras.TarasSevenTest">
+                <methods>
+                    <include name="newAvgTest"/>
+                    <include name="newAvgTestIllegalArgumentException"/>
+                    <include name="seriesSumTest1"/>
+                    <include name="seriesSumTest2"/>
+                    <include name="seriesSumTest3"/>
+                    <include name="whereIsHeTest1"/>
+                    <include name="whereIsHeTest2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Taras/IdeaProjects/codewars/src/test/kata/implementation/taras/TarasSixTest.java">
+        <classes>
+            <class name="test.kata.implementation.taras.TarasSixTest">
+                <methods>
+                    <include name="findNbBasicTest"/>
+                    <include name="findNbBasicTest2"/>
+                    <include name="findNbBasicTest3"/>
+                    <include name="findNbBasicTest4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

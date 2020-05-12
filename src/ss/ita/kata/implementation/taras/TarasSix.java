@@ -5,7 +5,17 @@ import ss.ita.kata.Six;
 public class TarasSix implements Six {
     @Override
     public long findNb(long m) {
-        return 0;
+        long n = 1L;
+        for (int i = 0; i < Math.cbrt(m); i++) {
+            n++;
+            long l = (n * (n + 1)) / 2;
+
+            if (l * l == m) {
+                return n;
+            }
+        }
+
+        return -1;
     }
 
     @Override
