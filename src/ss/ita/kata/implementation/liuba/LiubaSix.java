@@ -127,8 +127,8 @@ public class LiubaSix implements Six {
 
         HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
 
-        String key = "";
-        int value = 0;
+            String key = "";
+            int value = 0;
 
         for (String letter : lstOf1stLetter) {
             value = 0;
