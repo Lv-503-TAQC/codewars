@@ -1,6 +1,5 @@
 package test.kata.implementation.liuba;
 
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ss.ita.kata.Six;
@@ -11,18 +10,38 @@ import static org.testng.Assert.assertEquals;
 public class LiubaSixTest {
 
     Six ipml = new LiubaSix();
-//    Six ipml = new TarasSix();
-//    Six ipml = new NikSix();
-//    Six ipml = new MykolaSix();
 
-    @Test(dataProvider="balance")
-    public void balance (String input, String expected) {
+
+    /*Build a pile of Cubes*/
+    @Test(dataProvider="findNbTest")
+    public void findNbTest (long expected, long input) {
+        long actual = ipml.findNb(input);
+        assertEquals(actual, expected);
+
+    }
+
+    @DataProvider
+    public Object[][] findNbTest() {
+
+        Object [][] data = new Object [2][2];
+
+        data[0][0] = 2022;
+        data[0][1] = 4183059834009L;
+        data[1][0] = -1;
+        data[1][1] = 24723578342962L;
+
+        return data;
+    }
+
+    /*Easy Balance Checking*/
+    @Test(dataProvider="balanceTest")
+    public void balanceTest (String input, String expected) {
         String actual = ipml.balance(input);
         assertEquals(actual, expected);
     }
 
     @DataProvider
-    public Object[][] balance() {
+    public Object[][] balanceTest() {
 
         Object [][] data = new Object [2][2];
 
@@ -37,34 +56,56 @@ public class LiubaSixTest {
         return data;
     }
 
-    @Test(dataProvider="findNb")
-    public void findNb (long expected, long input) {
-        long actual = ipml.findNb(input);
-        Assert.assertEquals(actual, expected);
 
-    }
+    /*Ranking NBA teams*/
+    @Test(dataProvider="nbaCupTest")
+     public void nbaCupTest(String games, String team, String expected){
+         String actual = ipml.nbaCup(games, team);
+            assertEquals(actual, expected);
+        }
 
     @DataProvider
-    public Object[][] findNb() {
+    public Object[][] nbaCupTest() {
 
-        Object [][] data = new Object [2][2];
+        Object [][] data = new Object [4][3];
 
-        data[0][0] = 2022;
-        data[0][1] = 4183059834009L;
-        data[1][0] = -1;
-        data[1][1] = 24723578342962L;
+        data[0][0] = "San Antonio Spurs 111 Houston Rockets 86,Chicago Bulls 103 Dallas Mavericks 102,Minnesota Timberwolves 112 Milwaukee Bucks 108,"
+                + "New Orleans Pelicans 93 Miami Heat 90,Boston Celtics 81 Philadelphia 76ers 65,Detroit Pistons 115 Atlanta Hawks 87,"
+                + "Los Angeles Lakers 97 Golden State Warriors 136,Utah Jazz 98 Denver Nuggets 78,Boston Celtics 99 New York Knicks 85,"
+                + "Miami Heat 110 Washington Wizards 105,Detroit Pistons 94 Charlotte Hornets 99,Orlando Magic 110 New Orleans Pelicans 107,"
+                + "Chicago Bulls 103 Indiana Pacers 94,Milwaukee Bucks 106 Minnesota Timberwolves 88,Los Angeles Lakers 104 Portland Trail Blazers 102,"
+                + "Houston Rockets 120 New Orleans Pelicans 100,Boston Celtics 111 Brooklyn Nets 105,Charlotte Hornets 94 Chicago Bulls 86,";
+
+        data[0][1] = "Boston Celtics";
+        data[0][2] = "Boston Celtics:W=3;D=0;L=0;Scored=291;Conceded=255;Points=9";
+        data[1][0] = "San Antonio Spurs 111 Houston Rockets 86,Chicago Bulls 103 Dallas Mavericks 102,Minnesota Timberwolves 112 Milwaukee Bucks 108,"
+                + "New Orleans Pelicans 93 Miami Heat 90,Boston Celtics 81 Philadelphia 76ers 65,Detroit Pistons 115 Atlanta Hawks 87,";
+        data[1][1] = "";
+        data[1][2] = "";
+        data[2][0] = "Boston Celtics 111 Houston Rockets 86,Chicago Bulls 103 Dallas Mavericks 102,Minnesota Timberwolves 112 Milwaukee Bucks 108,"
+                + "New Orleans Pelicans 93 Miami Heat 90,Boston Celtics 81.112 Philadelphia 76ers 65,Detroit Pistons 115 Atlanta Hawks 87,";
+        data[2][1] = "Boston Celtics";
+        data[2][2] = "Error(float number):Boston Celtics 81.112 Philadelphia 76ers 65";
+
+        data[3][0] = "Boston Celtics 111 Houston Rockets 86,Chicago Bulls 103 Dallas Mavericks 102,Minnesota Timberwolves 112 Milwaukee Bucks 108,"
+                + "New Orleans Pelicans 93 Miami Heat 90,Boston Celtics 81.112 Philadelphia 76ers 65,Detroit Pistons 115 Atlanta Hawks 87,";
+        data[3][1] = "Boston Celt";
+        data[3][2] = "Boston Celt:This team didn't play!";
+
 
         return data;
     }
 
-    @Test(dataProvider="stockSummary")
-    public void stockSummary(String[] codes,String[] letters, String expected) {
+
+    /*Help the bookseller !*/
+    @Test(dataProvider="stockSummaryTest")
+    public void stockSummaryTest(String[] codes,String[] letters, String expected) {
         String actual = ipml.stockSummary(codes, letters);
         assertEquals(actual, expected);
     }
 
     @DataProvider
-    public Object[][] stockSummary() {
+    public Object[][] stockSummaryTest() {
 
         Object [][] data = new Object [2][3];
 
