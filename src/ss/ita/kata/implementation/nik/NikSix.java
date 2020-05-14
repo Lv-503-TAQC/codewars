@@ -5,7 +5,9 @@ import ss.ita.kata.Six;
 public class NikSix implements Six {
     @Override
     public long findNb(long m) {
-        return 0;
+        long mm = 0, n = 0;
+        while (mm < m) mm += ++n * n * n;
+        return mm == m ? n : -1;
     }
 
     @Override
