@@ -155,33 +155,50 @@ public class LiubaSix implements Six {
 
                             }
                         }
-                        p = Pattern.compile("([0-9]+)$");
+                        p = Pattern.compile("([0-9]+[.][0-9]+|[0-9]+)$");
                         m = p.matcher(match);
 
                         if (m.find()) {
-                            teamTotal += Integer.valueOf(match.substring(m.start(), m.end()));
-                            team = Integer.valueOf(match.substring(m.start(), m.end()));
+
+                            try {
+                                teamTotal += Integer.valueOf(match.substring(m.start(), m.end()));
+                                team = Integer.valueOf(match.substring(m.start(), m.end()));
+                            } catch (NumberFormatException e) {
+                                s = "Error(float number):" + match;
+                            }
+
                         }
 
                     } else if (index == 0) {
-                        p = Pattern.compile("[0-9]+");
+                        p = Pattern.compile("[0-9]+[.][0-9]+|[0-9]+");
                         m = p.matcher(match);
 
                         if (m.find()) {
-                            int number = Integer.valueOf(match.substring(m.start(), m.end()));
-                            teamTotal += number;
-                            team = number;
+
+                            try {
+                                teamTotal += Integer.valueOf(match.substring(m.start(), m.end()));
+                                team = Integer.valueOf(match.substring(m.start(), m.end()));
+
+                            } catch (NumberFormatException e) {
+                                s = "Error(float number):" + match;
+
+                            }
                         }
 
-                        p = Pattern.compile("([0-9]+)$");
+                        p = Pattern.compile("([0-9]+[.][0-9]+|[0-9]+)$");
                         m = p.matcher(match);
 
                     }
 
                     if (m.find()) {
 
-                        adversTotal += Integer.valueOf(match.substring(m.start(), m.end()));
-                        adversaries = Integer.valueOf(match.substring(m.start(), m.end()));
+                        try {
+                            adversTotal += Integer.valueOf(match.substring(m.start(), m.end()));
+                            adversaries = Integer.valueOf(match.substring(m.start(), m.end()));
+                        } catch (NumberFormatException e) {
+                            s = "Error(float number):" + match;
+
+                        }
                     }
 
                     if (team > adversaries) {
