@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/home/m/IdeaProjects/codewars/src/test/kata/implementation/nik">
+
+
+
+        <groups>
+            <define name="all">
+                <include name="five"/>
+                <include name="six"/>
+                <include name="seven"/>
+                <include name="eight"/>
+            </define>
+
+            <run>
+                <include name="seven"/>
+
+            </run>
+        </groups>
+
+
+        <classes>
+            <class name="test.kata.implementation.nik.NikEightTest"/>
+            <class name="test.kata.implementation.nik.NikSevenTest"/>
+        </classes>
+    </test>
+
+</suite>
